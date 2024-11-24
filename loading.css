@@ -1,0 +1,99 @@
+html body{
+    background-color: #1b2555;
+}
+@keyframes blinkCursor { 50%{
+    border-right-color:transparent;
+}
+}
+@keyframes typeAndDelete {
+    0%,
+    10%{
+        width: 0;
+    }
+    45%,
+    55%{
+        width: 6em;
+    }
+    90%, 
+    100%{
+        width: 0;
+    }
+}
+.main-box{
+    border: 0.1em solid #333;
+    background-color: #1a1a1a;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    /*padding: 1.5em 1em;*/
+    width: 18em;
+    height: 10em;
+    margin: 100px auto;
+    box-shadow: 0 3px 3px ;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.headd{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.5em;
+    background-color: #333;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 0 0.4em;
+    box-sizing: border-box;
+}
+.main-controls{
+    float: left;
+}
+.control {
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    margin-left: 0px;
+    border-radius: 50%;
+    background-color: #777;
+}
+.control.close{
+    background-color: red;
+}
+.control.minimize{
+    background-color: yellow;
+}
+.control.maximize{
+    background-color: green;
+}
+.tittle-status {
+    float: right;
+    margin-right: 110px;
+    line-height: 1.5em;
+    color: #eee;
+    opacity: 1.5;
+}
+.textt{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.2em solid green; /*cursor */
+    animation: typeAndDelete 4.5s steps(11) infinite, blinkCursor 0.5s step-end infinite;
+    margin-top: 4em;
+    padding: 5px;
+    margin-left: 2em;
+}
+.owner{
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    font-size: smaller;
+    width: 88px;
+    height:34px;
+    border: solid 0.1px;
+    border-radius: 10px;
+    /*text-align: center;
+    display: flex;
+    justify-content: center;*/
+}
